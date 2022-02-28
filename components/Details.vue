@@ -22,7 +22,7 @@
   }
   ```
 -->
-<div class="bg-white">
+<div class="bg-white w-full">
     <Header/>
   <div class="pt-6">
     <nav aria-label="Breadcrumb">
