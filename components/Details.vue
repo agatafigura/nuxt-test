@@ -322,3 +322,10 @@ export default {
     components: {Header}
 }
 </script>
+
+<style scoped>
+[aria-current="page"] {
+  color: darkslategray;
+  font-weight: 600;
+}
+</style>

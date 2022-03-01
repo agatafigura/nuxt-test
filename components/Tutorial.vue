@@ -16,16 +16,16 @@
 
         <li>
           <div class="flex items-center">
-            <a @click="$emit('close-details')" class="cursor-pointer mr-2 text-sm font-medium text-gray-900"> Clothing </a>
+            <a @click="$emit('close-details')" aria-current="page" class="cursor-pointer mr-2 text-sm font-medium text-gray-900"> Clothing </a>
           
           </div>
         </li>
 
       </ol>
     </nav>
-  <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+  <div class="max-w-2xl mx-auto py-20 px-4 sm:py-20 sm:px-10 lg:max-w-7xl lg:px-8">
 
-    <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+    <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
       <div class="group relative">
         <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
           <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="w-full h-full object-center object-cover lg:w-full lg:h-full">
@@ -105,7 +105,7 @@
     </div>
   </div>
 </div>
-<Basket class="z-10" v-show="showBasket" @close-basket="showBasket = false" />
+<Basket class="z-10" v-show="showBasket" @close-basket="showBasket = false"/>
 <Details class="absolute top-0 left-0" v-show="showDetails" @open-basket="showBasket = true" @close-details="showDetails = false"/>
 </div>
 
@@ -129,3 +129,10 @@ export default {
   
 }
 </script>
+
+<style scoped>
+[aria-current="page"] {
+  color: darkslategray;
+  font-weight: 600;
+}
+</style>
